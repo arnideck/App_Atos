@@ -1,0 +1,21 @@
+[2023-03-21 19:06:44] local.DEBUG: InputNumber: 1,00 thousand_separator: . decimal_separator: ,  
+[2023-03-21 19:06:44] local.DEBUG: Num1: 1,00  
+[2023-03-21 19:06:44] local.DEBUG: Num2: 1.00  
+[2023-03-21 19:06:44] local.DEBUG: InputNumber: 1,00 thousand_separator: . decimal_separator: ,  
+[2023-03-21 19:06:44] local.DEBUG: Num1: 1,00  
+[2023-03-21 19:06:44] local.DEBUG: Num2: 1.00  
+[2023-03-21 19:06:44] local.DEBUG: InputNumber: 17.08 thousand_separator: . decimal_separator: ,  
+[2023-03-21 19:06:44] local.DEBUG: Num1: 1708  
+[2023-03-21 19:06:44] local.DEBUG: Num2: 1708  
+[2023-03-21 19:06:44] local.DEBUG: InputNumber: 17.08 thousand_separator: . decimal_separator: ,  
+[2023-03-21 19:06:44] local.DEBUG: Num1: 1708  
+[2023-03-21 19:06:44] local.DEBUG: Num2: 1708  
+[2023-03-21 19:06:44] local.DEBUG: InputNumber: 45,00 thousand_separator: . decimal_separator: ,  
+[2023-03-21 19:06:44] local.DEBUG: Num1: 45,00  
+[2023-03-21 19:06:44] local.DEBUG: Num2: 45.00  
+[2023-03-21 19:06:44] local.DEBUG: InputNumber: 24,77 thousand_separator: . decimal_separator: ,  
+[2023-03-21 19:06:44] local.DEBUG: Num1: 24,77  
+[2023-03-21 19:06:44] local.DEBUG: Num2: 24.77  
+[2023-03-21 19:06:44] local.DEBUG: InputNumber: 24,77 thousand_separator: . decimal_separator: ,  
+[2023-03-21 19:06:44] local.DEBUG: Num1: 24,77  
+[2023-03-21 19:06:44] local.DEBUG: Num2: 24.77  
