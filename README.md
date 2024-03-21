@@ -1,4 +1,4 @@
-  Atos Smart System
+Atos Smart System
 O Atos Smart System é uma solução web inovadora desenvolvida para otimizar e automatizar a elaboração de folhas de pagamento, atendendo às necessidades específicas de departamentos de Recursos Humanos. Utilizando uma combinação poderosa de tecnologias modernas, o sistema proporciona uma experiência ágil e precisa na gestão financeira de colaboradores, desde o cálculo de salários até a administração de benefícios e impostos.
 
 Características
