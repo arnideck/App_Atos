@@ -321,7 +321,13 @@ class PayrollController extends Controller
             $payroll_group['business_id'] = $business_id;
             $payroll_group['name'] = $request->input('payroll_group_name');
             $payroll_group['status'] = $request->input('payroll_group_status');
-            $payroll_group['gross_total'] = $this->transactionUtil->num_uf($request->input('total_gross_amount'));
+           
+            $payroll_group['gross_total'] = $this->transactionUtil->num_uf($request->input('total_gross_amount'));   //$request->input('total_gross_amount')
+            
+            $teste =  $this->transactionUtil->num_uf($request->input('total_gross_amount'));
+            $teste = $teste/100.00;
+            $payroll_group['gross_total'] = $teste;
+            
             $payroll_group['location_id'] = $request->input('location_id');
             $payroll_group['created_by'] = auth()->user()->id;
             

@@ -32,8 +32,9 @@ class Util
      */
     public function num_uf($input_number, $currency_details = null)
     {
+               
         if (is_numeric($input_number)) return (float) $input_number;
-
+        
         $thousand_separator  = '';
         $decimal_separator  = '';
 
@@ -44,10 +45,12 @@ class Util
             $thousand_separator = session()->has('currency') ? session('currency')['thousand_separator'] : '';
             $decimal_separator = session()->has('currency') ? session('currency')['decimal_separator'] : '';
         }
+       // dd($decimal_separator);
 
         $num = str_replace($thousand_separator, '', $input_number);
+       
         $num = str_replace($decimal_separator, '.', $num);
-
+        
         return (float)$num;
     }
 

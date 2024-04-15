@@ -86,7 +86,7 @@ $(document).ready( function () {
 	    let total = total_duration * amount_per_unit_duration;
 	    __write_number($("input#total_"+id), total, false, 2);
 
-        //calculate total allownace
+        //calculate total allowance
         let total_allowance = 0;
         $("table#allowance_table_"+id).find('tbody tr').each(function () {
             let type = $(this).find('.amount_type').val();
@@ -122,6 +122,7 @@ $(document).ready( function () {
         let total_gross_amount = 0;
         $("input.gross_amount").each(function () {
             let gross_amount = __read_number($(this));
+           // alert(gross_amount);
             total_gross_amount += gross_amount;
         });
         $('#total_gross_amount').val(total_gross_amount);
