@@ -114,7 +114,7 @@ return [
     'edit_payroll' => 'Editar folha de pagamento',
     'payroll_of_employee' => 'Folha de pagamento de <strong>:employee</strong> para <strong>:date</strong>',
     'total_work_duration' => 'Duração total do trabalho',
-    'amount_per_unit_duartion' => 'Quantidade por unidade de duração',
+    'amount_per_unit_duration' => 'Quantidade por unidade de duração',
     'allowances' => 'Abonos',
     'allowance' => 'Abono',
     'deductions' => 'Deduções',

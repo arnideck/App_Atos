@@ -181,7 +181,7 @@ function __number_f(
 //Read input and convert it into natural number
 function __read_number(input_element, use_page_currency = false) {
     var teste = input_element.val();
-    alert("inpt"+teste);
+    //alert("inpt"+teste);
     return __number_uf(input_element.val(), use_page_currency);
 }
 

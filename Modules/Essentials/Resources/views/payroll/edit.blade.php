@@ -33,8 +33,8 @@
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
-                        {!! Form::label('essentials_amount_per_unit_duration', __( 'essentials::lang.amount_per_unit_duartion' ) . ':*') !!}
-                        {!! Form::text('essentials_amount_per_unit_duration', @num_format($payroll->essentials_amount_per_unit_duration), ['class' => 'form-control input_number', 'placeholder' => __( 'essentials::lang.amount_per_unit_duartion' ), 'required' ]); !!}
+                        {!! Form::label('essentials_amount_per_unit_duration', __( 'essentials::lang.amount_per_unit_duration' ) . ':*') !!}
+                        {!! Form::text('essentials_amount_per_unit_duration', @num_format($payroll->essentials_amount_per_unit_duration), ['class' => 'form-control input_number', 'placeholder' => __( 'essentials::lang.amount_per_unit_duration' ), 'required' ]); !!}
                     </div>
                 </div>
                 <div class="col-md-3">

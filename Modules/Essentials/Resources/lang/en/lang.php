@@ -112,7 +112,7 @@ return [
     'edit_payroll' => 'Edit Payroll',
     'payroll_of_employee' => 'Payroll of <strong>:employee</strong> for <strong>:date</strong>',
     'total_work_duration' => 'Total work duration',
-    'amount_per_unit_duartion' => 'Amount per unit duration',
+    'amount_per_unit_duration' => 'Amount per unit duration',
     'allowances' => 'Earnings',
     'allowance' => 'Earning',
     'deductions' => 'Deductions',

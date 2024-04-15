@@ -555,6 +555,8 @@ class PayrollController extends Controller
             $payroll['deduction_percent'] = $request->input('deduction_percent');
             $payroll['deduction_amounts'] = $request->input('deduction_amounts');
             $payroll['final_total'] = $request->input('final_total');
+            
+            //dd($payroll['final_total']);
 
             $allowances_and_deductions = $this->getAllowanceAndDeductionJson($payroll);
             $input['essentials_allowances'] = $allowances_and_deductions['essentials_allowances'];
@@ -801,6 +803,9 @@ class PayrollController extends Controller
             $payrolls[$transaction->expense_for]['total_leaves'] = $this->essentialsUtil->getTotalLeavesForGivenDateOfAnEmployee($business_id, $transaction->expense_for, $start_date->format('Y-m-d'), $end_date->format('Y-m-d'));
             $payrolls[$transaction->expense_for]['total_days_worked'] = $this->essentialsUtil->getTotalDaysWorkedForGivenDateOfAnEmployee($business_id, $transaction->expense_for, $start_date, $end_date);
             
+            //dd($payrolls);
+            
+            
             //get total work duration of employee(attendance)
             $payrolls[$transaction->expense_for]['total_work_duration'] = $this->essentialsUtil->getTotalWorkDuration('hour', $transaction->expense_for, $business_id, $start_date->format('Y-m-d'), $end_date->format('Y-m-d'));
 
@@ -851,6 +856,12 @@ class PayrollController extends Controller
             $pg_input['status'] = $request->input('payroll_group_status');
             $pg_input['gross_total'] = $this->transactionUtil->num_uf($request->input('total_gross_amount'));
 
+            $teste =  $this->transactionUtil->num_uf($request->input('total_gross_amount'));
+            $teste = $teste/100.00;
+            $pg_input['gross_total'] = $teste;
+            
+           // dd($pg_input['gross_total']);
+            
             DB::beginTransaction();
                 $payroll_group = PayrollGroup::where('business_id', $business_id)
                                     ->findOrFail($payroll_group_id);

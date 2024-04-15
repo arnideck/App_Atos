@@ -81,7 +81,7 @@
                         @foreach($payrolls as $employee => $payroll)
                             @php
                                 if ($action != 'edit') {
-                                    $amount_per_unit_duration = (double)$payroll['essentials_salary'];
+                                    echo $amount_per_unit_duration = (double)$payroll['essentials_salary'];
                                     $total_work_duration = 1;
                                     $duration_unit = __('lang_v1.month');
                                     if ($payroll['essentials_pay_period'] == 'week') {
@@ -92,11 +92,11 @@
                                         $duration_unit = __('lang_v1.day');
                                     }
                                     $total = $total_work_duration * $amount_per_unit_duration;
-                                } else {
-                                    $amount_per_unit_duration = $payroll['essentials_amount_per_unit_duration'];
-                                    $total_work_duration = $payroll['essentials_duration'];
+                                } else {//alterado por mim 15042024                                    
+                                    $amount_per_unit_duration = number_format((float)$payroll['essentials_amount_per_unit_duration'], 2, ',', '.');
+                                    $total_work_duration = 1; // $payroll['essentials_duration'];
                                     $duration_unit = $payroll['essentials_duration_unit'];
-                                    $total = $total_work_duration * $amount_per_unit_duration;
+                                    $total = $total_work_duration * (float)str_replace(',', '.', $amount_per_unit_duration);
                                 }
                             @endphp
                             <tr data-id="{{$employee}}">
@@ -132,8 +132,8 @@
 
                                     <br>
                                     
-                                    {!! Form::label('essentials_amount_per_unit_duration_'.$employee, __( 'essentials::lang.amount_per_unit_duartion' ) . ':*') !!}
-                                    {!! Form::text('payrolls['.$employee.'][essentials_amount_per_unit_duration]', $amount_per_unit_duration, ['class' => 'form-control input_number essentials_amount_per_unit_duration', 'placeholder' => __( 'essentials::lang.amount_per_unit_duartion' ), 'required', 'data-id' => $employee, 'id' => 'essentials_amount_per_unit_duration_'.$employee]); !!}
+                                    {!! Form::label('essentials_amount_per_unit_duration_'.$employee, __( 'essentials::lang.amount_per_unit_duration' ) . ':*') !!}
+                                    {!! Form::text('payrolls['.$employee.'][essentials_amount_per_unit_duration]', $amount_per_unit_duration, ['class' => 'form-control input_number essentials_amount_per_unit_duration', 'placeholder' => __( 'essentials::lang.amount_per_unit_duration' ), 'required', 'data-id' => $employee, 'id' => 'essentials_amount_per_unit_duration_'.$employee]); !!}
                                         
                                     <br>
                                     {!! Form::label('total_'.$employee, __( 'sale.total' ) . ':') !!}
