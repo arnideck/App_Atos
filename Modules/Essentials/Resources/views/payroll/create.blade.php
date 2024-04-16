@@ -81,7 +81,8 @@
                         @foreach($payrolls as $employee => $payroll)
                             @php
                                 if ($action != 'edit') {
-                                    echo $amount_per_unit_duration = (double)$payroll['essentials_salary'];
+                                    $amount_per_unit_duration = number_format((float)$payroll['essentials_salary'], 2, ',', '.');
+                                    //$amount_per_unit_duration = (double)$payroll['essentials_salary'];
                                     $total_work_duration = 1;
                                     $duration_unit = __('lang_v1.month');
                                     if ($payroll['essentials_pay_period'] == 'week') {
@@ -91,7 +92,8 @@
                                         $total_work_duration = \Carbon::parse($transaction_date)->daysInMonth;
                                         $duration_unit = __('lang_v1.day');
                                     }
-                                    $total = $total_work_duration * $amount_per_unit_duration;
+                                    $total = $total_work_duration * (float)str_replace(',', '.', $amount_per_unit_duration);
+                                    //dd($total);
                                 } else {//alterado por mim 15042024                                    
                                     $amount_per_unit_duration = number_format((float)$payroll['essentials_amount_per_unit_duration'], 2, ',', '.');
                                     $total_work_duration = 1; // $payroll['essentials_duration'];

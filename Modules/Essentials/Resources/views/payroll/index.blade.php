@@ -189,6 +189,7 @@
 @section('javascript')
     <script type="text/javascript">
         $(document).ready( function(){
+            alert("teste");
             payrolls_table = $('#payrolls_table').DataTable({
                 processing: true,
                 serverSide: true,
@@ -235,6 +236,7 @@
 
             $(document).on('change', '#user_id_filter, #month_year_filter, #department_id, #designation_id, #location_id_filter', function() {
                 payrolls_table.ajax.reload();
+               
             });
 
             if ($('#add_payroll_step1').length) {

@@ -858,9 +858,7 @@ class PayrollController extends Controller
 
             $teste =  $this->transactionUtil->num_uf($request->input('total_gross_amount'));
             $teste = $teste/100.00;
-            $pg_input['gross_total'] = $teste;
-            
-           // dd($pg_input['gross_total']);
+            $pg_input['gross_total'] = $tdd($pg_input['gross_total']);
             
             DB::beginTransaction();
                 $payroll_group = PayrollGroup::where('business_id', $business_id)
